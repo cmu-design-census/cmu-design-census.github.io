@@ -1,0 +1,510 @@
+/*GT America woot*/
+@font-face {
+    font-family: GT America;
+    src: url("GTAmerica/GT America Regular.otf") format("opentype");
+}
+
+
+/* Sidebar */
+
+ul li a {
+    font-size:0.75rem;
+    text-decoration: none;
+    color: #7f86a0;
+    vertical-align:middle;
+    padding:0px;
+    margin:0px;
+}
+
+
+ul li a:hover {
+    color:rgba(127,134,160,0.5);
+}
+
+/*#sideDisplay {*/
+/*    display:inline-block;*/
+/*    position:relative;*/
+/*    left:30px;*/
+/*}*/
+
+
+/* Always take up entire screen */
+#page-content-wrapper {
+    width: 100vw;
+    position: absolute;
+    height: 100vh;
+}
+
+/* Here are all the code related to the buttons*/
+
+#page-content-wrapper a.btn-success.active, a.btn-success.focus, a.btn-success:active, a.btn-success:focus, a.btn-success:hover, a.open>.dropdown-toggle.btn-success {
+    background-color: transparent;
+    border-color: #fff;
+    color: #fff;
+}
+
+.myButton {
+    background-color:#44c767;
+    border:1px solid #18ab29;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:17px;
+    padding:16px 31px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #2f6627;
+}
+
+.myButton:hover {
+    background-color:#5cbf2a;
+}
+
+.myButton:active {
+    position:relative;
+    top:1px;
+}
+
+
+
+h5 a {
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+#page-content-wrapper.btn a {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+/* Since we added left padding, we need to shrink the width by 250px */
+#wrapper.menuDisplayed #page-content-wrapper a {
+    margin-left: 274px;
+}
+
+
+/* Sidebar styling - the entire ul list */
+.sidebar-nav {
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 0px;
+    line-height: 20px;
+}
+
+.sidebar-nav li a {
+    
+    display: inline-block;
+    text-decoration: none;
+    color: rgba(127,134,160);
+}
+
+/* modifying the bootstrap element*/
+.card {
+    font-size: 0.8rem;
+    border:none;
+    border-radius: 0;
+    background-color: transparent;
+    border-bottom: 1px solid #000D42;
+    margin-top: 16px;
+}
+
+.card-header {
+    background-color: transparent;
+    border:none;
+}
+
+.card-block {
+    padding-left: 0px;
+    font-weight: light;
+}
+
+/*I love hardcoding*/
+
+
+.selectionReset ,
+.selectionSatisfiedAll, .selectionFullySatisfied, .selectionMostlySatisfied, 
+.selectionSomewhatSatisfied, .selectionMarginallySatisfied, .selectionNotSatisfiedAtAll{
+    margin-left: 20px;
+    background-color: #7f86a0;
+    width: 13px;
+    height: 13px;
+    border-radius:2px;
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+.selectionCurrent, 
+.selectionPrevious, 
+.selection2ndPrevious {
+    margin-left: 20px;
+    background-color: #7f86a0;
+    width: 13px;
+    height: 13px;
+    border-radius:100px;
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+
+
+.selectionAll{
+    margin-left: 20px;
+    background: linear-gradient(-45deg,#2412f8,#ffe200,#f44035);
+    width: 13px;
+    height: 13px;
+    border-radius:2px;
+    display: inline-flex;
+    vertical-align: middle;
+}
+.selectionAgency{
+    margin-left: 20px;
+    background-color: #f43160;
+    width: 13px;
+    height: 13px;
+    border-radius:2px;
+    display: inline-flex;
+    vertical-align: middle;
+}
+.selectionConsulting{
+    margin-left: 20px;
+    background-color: #ffe200;
+    width: 13px;
+    height: 13px;
+    border-radius:2px;
+    display: inline-flex;
+    vertical-align: middle;
+}
+.selectionTech{
+    margin-left: 20px;
+    background-color: #2412f8;
+    width: 13px;
+    height: 13px;
+    border-radius:2px;
+    display: inline-flex;
+    vertical-align: middle;
+}
+.selectionBusiness{
+    margin-left: 20px;
+    background-color: #fbd0b5;
+    width: 13px;
+    height: 13px;
+    border-radius:2px;
+    display: inline-flex;
+    vertical-align: middle;
+}
+.selectionPrintPublishing{
+    margin-left: 20px;
+    background-color: #4ee2a2;
+    width: 13px;
+    height: 13px;
+    border-radius:2px;
+    display: inline-flex;
+    vertical-align: middle;
+}
+.selectionHealthcare{
+    margin-left: 20px;
+    background-color: #0271fe;
+    width: 13px;
+    height: 13px;
+    border-radius:2px;
+    display: inline-flex;
+    vertical-align: middle;
+}
+.selectionEntertainment{
+    margin-left: 20px;
+    background-color: #55fefd;
+    width: 13px;
+    height: 13px;
+    border-radius:2px;
+    display: inline-flex;
+    vertical-align: middle;
+}
+.selectionManufacturing{
+    margin-left: 20px;
+    background-color: #fab500;
+    width: 13px;
+    height: 13px;
+    border-radius:2px;
+    display: inline-flex;
+    vertical-align: middle;
+}
+.selectionNonprofit{
+    margin-left: 20px;
+    background-color: #f44035;
+    width: 13px;
+    height: 13px;
+    border-radius:2px;
+    display: inline-flex;
+    vertical-align: middle;
+}
+.selectionEducation{
+    margin-left: 20px;
+    background-color: #03366d;
+    width: 13px;
+    height: 13px;
+    border-radius:2px;
+    display: inline-flex;
+    vertical-align: middle;
+}
+.selectionFinance{
+    margin-left: 20px;
+    background-color: #b89cfd;
+    width: 13px;
+    height: 13px;
+    border-radius:2px;
+    display: inline-flex;
+    vertical-align: middle;
+}
+.selectionGovernment{
+    margin-left: 20px;
+    background-color: #f32bb7;
+    width: 13px;
+    height: 13px;
+    border-radius:2px;
+    display: inline-flex;
+    vertical-align: middle;
+}
+.selectionLaw{
+    margin-left: 20px;
+    background-color: #7f86a0;
+    width: 13px;
+    height: 13px;
+    border-radius:2px;
+    display: inline-flex;
+    vertical-align: middle;
+}
+.selectionRetail{
+    margin-left: 20px;
+    background-color: #f35afe;
+    width: 13px;
+    height: 13px;
+    border-radius:2px;
+    display: inline-flex;
+    vertical-align: middle;
+}
+.selectionTransportation {
+    margin-left: 20px;
+    background-color: #8ed7f7;
+    width: 13px;
+    height: 13px;
+    border-radius:2px;
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+.selectionOther {
+    margin-left: 20px;
+    background-color: #309ead;
+    width: 13px;
+    height: 13px;
+    border-radius:2px;
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+.whichReset ,.whichCurrent, .whichPrevious, .which2ndPrevious, .whichAll,.whichAgency, .whichConsulting, .whichTech, .whichBusiness, .whichPrintPublishing, .whichHealthcare,.whichEntertainment, .whichManufacturing, .whichNonprofit,.whichEducation, .whichFinance, .whichGovernment, .whichLaw, .whichRetail, .whichTransportation, .whichOther, .whichSatisfiedAll, .whichFullySatisfied, .whichMostlySatisfied, .whichSomewhatSatisfied, .whichMarginallySatisfied, .whichNotSatisfiedAtAll{
+    padding: 2px 0px 0px 14px;
+}
+
+.selectionToggleOn {
+    background-color: none ;
+    background: none;
+    width: 11px;
+    height: 11px;
+    border:1px solid #7f86a0;
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+/*this is the code for the floating menu icon*/
+.float-nav {
+  position: absolute;
+  left: 95px;
+  top: 50px;
+  z-index: 2;
+}
+
+
+.menu-btn, .menu-btn-orbs-zoom-in, .menu-btn-orbs-reset,.menu-btn-orbs-zoom-out,.menu-btn-orbs-2d-3d {
+    margin-left: 30px;
+    width:60px;
+    height:60px;
+    font-weight: 700;
+    text-decoration: none;
+    display:block;
+    color: rgba(127,134,160,0.75);
+    margin: 0px 0px 0px 0px;
+    text-align: center;
+    /*box-shadow: 2px 2px 8px rgba(119,119,119,0.2);*/
+    border-radius: 300px;
+    /*border: 1px solid #eee;*/
+}
+
+.main-menu {
+    width:271.46px;
+    height:50px;
+    border-radius: 0px;
+}
+
+.menu-btn, .main-menu, .menu-btn-orbs-reset, .menu-btn-orbs-2d-3d, .menu-btn-orbs-zoom-in, .menu-btn-orbs-zoom-out {
+    border: 1px solid rgba(224,224,224,1);
+    
+}
+
+
+
+.float-orbs-1 {
+    position: absolute;
+    right: 110px;
+    bottom: 150px;
+}
+
+.float-orbs-2 {
+    position: absolute;
+    right: 210px;
+    bottom: 150px;
+}
+
+.float-orbs-3 {
+    position: absolute;
+    right: 310px;
+    bottom: 150px;
+}
+
+.float-orbs-4 {
+    position: absolute;
+    right: 410px;
+    bottom: 150px;
+}
+
+
+.float-nav > a:hover {
+    color:rgba(127,134,160,0.5);
+    transition: color 250ms linear;
+}
+
+.float-nav > a.menu-btn.active {
+  /*transition: background-color 250ms linear;*/
+  color:rgba(127,134,160);
+  background: rgba(0, 13, 66, 0);
+  box-shadow: 2px 2px 8px rgba(119,119,119,0.2);
+  /*transition: box-shadow 250ms linear;*/
+}
+
+
+
+.float-zoom-out > a.menu-btn-orbs-zoom-out.active, .float-zoom-in > a.menu-btn-orbs-zoom-in.active, .float-2d-3d > a.menu-btn-orbs-2d-3d.active, .float-reset > a.menu-btn-orbs-reset.active {
+  /*transition: background-color 250ms linear;*/
+  color:rgba(127,134,160,1);
+  box-shadow: 2px 2px 8px rgba(119,119,119,0.2);
+}
+
+
+
+.float-nav > a.menu-btn > ul {
+  list-style: none;
+  padding: 0px;
+  margin: 5px 0px;
+}
+
+
+.float-nav > a.menu-btn > .menu-txt {
+    position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+  padding-left: 25px;
+  width: 100%;
+  text-align: left;
+  font-size: .75rem;
+  font-weight: 700;
+  font-family: "GT America", sans-serif;
+  vertical-align:middle;
+}
+
+.float-zoom-out > a.menu-btn-orbs-zoom-out > .menu-txt, .float-zoom-in > a.menu-btn-orbs-zoom-in > .menu-txt,.float-2d-3d > a.menu-btn-orbs-2d-3d > .menu-txt, .float-reset > a.menu-btn-orbs-reset > .menu-txt {
+    position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    text-align: center;
+    font-size: 0.65rem;
+    font-family: "GT America", sans-serif;
+    font-weight: 300;
+    line-height:1.3rem;
+    vertical-align:middle;
+}
+
+.float-zoom-out > a:hover, .float-zoom-in > a:hover, .float-2d-3d > a:hover, .float-reset > a:hover {
+    color:rgba(127,134,160,0.5);
+}
+
+
+.main-nav {
+margin:0px 0px 0px 0px;
+  z-index: 2;
+  display: none;
+  font-family: "GT America", sans-serif;
+  position: absolute;
+  left: 95px;
+  top: 100px;
+}
+
+.main-nav-when {
+  margin:0px 0px 0px 0px;
+  z-index: 2;
+  display: none;
+  font-family: "GT America", sans-serif;
+  position: absolute;
+  left: 380px;
+  top: 100px;
+  width:0px;
+}
+
+
+.main-nav.active {
+  /*margin:12px 0px 0px 25px;*/
+  width:277px;
+  display: block;
+  opacity: 1;
+  overflow-y:scroll;
+  max-height: 80vh;
+  transition: all 1s ease-in;
+}
+
+
+.main-nav-when.active {
+  width:277px;
+  display: block;
+  opacity: 1;
+  overflow-y:scroll;
+  max-height: 80vh;
+}
+
+
+.main-nav > ul, .main-nav-when > ul, .main-nav-level > ul {
+  width: 98%;
+  display: block;
+  list-style: none;
+  margin: 8px 0px;
+  padding: 16px 0;
+  /*border: 1px solid #eee;*/
+  box-shadow: 2px 2px 8px rgba(119,119,119,0.2);
+  /*border-radius: 0px;*/
+}
+
+
+.main-nav-header {
+    font-size:0.8rem;
+    color: #7f86a0;
+    vertical-align:middle;
+  display: inline-block;
+    padding: 7px 0px 14px 18px;
+  margin:0px;
+  font-weight: 500;
+  line-height:0em;
+}
+
