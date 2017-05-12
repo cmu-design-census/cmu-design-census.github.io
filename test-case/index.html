@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CMU Design Census</title>
+        <link rel="stylesheet" type="text/css" href="reset.css">
+        
+        <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/jquery.fullPage2.css"/>
+        <link rel="stylesheet" type="text/css" href="css/vizTool.css"/>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <script src="js/three.js-master/build/three.min.js"></script>
+        <script src="js/stats.min.js"></script>
+        
+        <script src="js/js2/Projector.js"></script>
+		<script src="js/js2/TrackballControls.js"></script>
+		<script src="js/example1.js"></script>
+		<script src='js/threex.dynamictexture.js'></script>
+
+        
+        <link href="https://fonts.googleapis.com/css?family=Monda:400,700" rel="stylesheet">    
+    </head>
+    
+    <body>
+        <div id="wrapper">
+            <div id="fullpage">
+                <div class="section" id="section0" data-anchor="page1">
+                        <!-- slide 1 -->
+                        <div class="slide" data-anchor="slide1-1">
+                         <div class="bodycontainer">
+                                <div id="box">
+                                 <!--page content-->
+                                    <div id="page-content-wrapper">
+                                        <!--The new buttons-->
+                                        <div id="f_wrapper">
+                                            <div id="filter_wrapper">
+                                                <div class="filter_title">
+                                                    <h2>Filter</h2>
+                                                    <h3>Which Industry</h3>
+                                                </div>
+                                                <div class="filter_col" style="width:110px; margin-top:0px ;margin-left: 1.1vw; display: flex; flex-direction: column; justify-content: flex-start;">
+                                                    <div id="AllIndustries" class="filter_piece">
+                                                        <label id="all_color" class="checkbox-switch" onclick> <!-- The onclick attribute is required by iOS -->
+                                                            <input type="checkbox"/>
+                                                            <span class="checkbox-switch-inner"></span>
+                                                        </label>
+                                                        <a>All</a>
+                                                    </div>
+                                                    <div id="Agency" class="filter_piece">
+                                                        <label id="agency_color" class="checkbox-switch" onclick> <!-- The onclick attribute is required by iOS -->
+                                                            <input type="checkbox"/>
+                                                            <span class="checkbox-switch-inner"></span>
+                                                        </label>
+                                                        <a>Agency</a>
+                                                    </div>
+                                                    <div id="Consulting" class="filter_piece">
+                                                        <label id="consulting_color" class="checkbox-switch" onclick> <!-- The onclick attribute is required by iOS -->
+                                                            <input type="checkbox"/>
+                                                            <span class="checkbox-switch-inner"></span>
+                                                        </label>
+                                                        <a>Consulting</a>
+                                                    </div>
+                                                    <div id="Tech" class="filter_piece">
+                                                        <label id="tech_color" class="checkbox-switch" onclick> <!-- The onclick attribute is required by iOS -->
+                                                            <input type="checkbox"/>
+                                                            <span class="checkbox-switch-inner"></span>
+                                                        </label>
+                                                        <a>Tech</a>
+                                                    </div>
+                                                    <div id ="Business" class="filter_piece">
+                                                        <label id="business_color" class="checkbox-switch" onclick> <!-- The onclick attribute is required by iOS -->
+                                                            <input type="checkbox"/>
+                                                            <span class="checkbox-switch-inner"></span>
+                                                        </label>
+                                                        <a>Business</a>
+                                                    </div>
+                                                    <div id="Print" class="filter_piece">
+                                                        <label id="print_color" class="checkbox-switch" onclick> <!-- The onclick attribute is required by iOS -->
+                                                            <input type="checkbox"/>
+                                                            <span class="checkbox-switch-inner"></span>
+                                                        </label>
+                                                        <a>Print&Publishing</a>
+                                                    </div>
+                                                    <div id="Healthcare" class="filter_piece">
+                                                        <label id="healthcare_color" class="checkbox-switch" onclick> <!-- The onclick attribute is required by iOS -->
+                                                            <input type="checkbox"/>
+                                                            <span class="checkbox-switch-inner"></span>
+                                                        </label>
+                                                        <a>Healthcare</a>
+                                                    </div>
+                                                    <div  id="Entertainment" class="filter_piece">
+                                                        <label id="entertainment_color" class="checkbox-switch" onclick> <!-- The onclick attribute is required by iOS -->
+                                                            <input type="checkbox"/>
+                                                            <span class="checkbox-switch-inner"></span>
+                                                        </label>
+                                                        <a>Entertainment</a>
+                                                    </div>
+                                                    <div  id= "Manufacturing" class="filter_piece">
+                                                        <label id="manufacturing_color" class="checkbox-switch" onclick> <!-- The onclick attribute is required by iOS -->
+                                                            <input type="checkbox"/>
+                                                            <span class="checkbox-switch-inner"></span>
+                                                        </label>
+                                                        <a>Manufacturing</a>
+                                                    </div>
+                                                </div>
+                                	            <div class="filter_col" style="width:110px; margin-left: 1.1vw; display: flex; flex-direction: column; justify-content: flex-start;">
+                                                    <div class="filter_piece" id="non_disclosure">
+                                                        <label class="checkbox-switch" onclick> <!-- The onclick attribute is required by iOS -->
+                                                            <input type="checkbox"/>
+                                                            <span class="checkbox-switch-inner"></span>
+                                                        </label>
+                                                        <a></a>
+                                                    </div>
+                                                      <div id="Nonprofit" class="filter_piece">
+                                                        <label id="nonprofit_color" class="checkbox-switch" onclick>
+                                                            <input type="checkbox"/>
+                                                            <span class="checkbox-switch-inner"></span>
+                                                        </label>
+                                                        <a>Nonprofit</a>
+                                                    </div>
+                                                    <div id="Education" class="filter_piece">
+                                                        <label id="education_color" class="checkbox-switch" onclick> <!-- The onclick attribute is required by iOS -->
+                                                            <input type="checkbox"/>
+                                                            <span class="checkbox-switch-inner"></span>
+                                                        </label>
+                                                        <a>Education</a>
+                                                    </div>
+                                                    <div id="Finance" class="filter_piece">
+                                                        <label id="finance_color" class="checkbox-switch" onclick> <!-- The onclick attribute is required by iOS -->
+                                                            <input type="checkbox"/>
+                                                            <span class="checkbox-switch-inner"></span>
+                                                        </label>
+                                                        <a>Finance</a>
+                                                    </div>
+                                                    <div id="Government" class="filter_piece">
+                                                        <label id="government_color" class="checkbox-switch" onclick> <!-- The onclick attribute is required by iOS -->
+                                                            <input type="checkbox"/>
+                                                            <span class="checkbox-switch-inner"></span>
+                                                        </label>
+                                                        <a>Government</a>
+                                                    </div>
+                                                    <div id="Law" class="filter_piece">
+                                                        <label id="law_color" class="checkbox-switch" onclick> <!-- The onclick attribute is required by iOS -->
+                                                            <input type="checkbox"/>
+                                                            <span class="checkbox-switch-inner"></span>
+                                                        </label>
+                                                        <a>Law</a>
+                                                    </div>
+                                                    <div id="Retail" class="filter_piece">
+                                                        <label id="retail_color" class="checkbox-switch" onclick> <!-- The onclick attribute is required by iOS -->
+                                                            <input type="checkbox"/>
+                                                            <span class="checkbox-switch-inner"></span>
+                                                        </label>
+                                                        <a>Retail</a>
+                                                    </div>
+                                                    <div id="Transportation" class="filter_piece">
+                                                        <label id="transportation_color" class="checkbox-switch" onclick> <!-- The onclick attribute is required by iOS -->
+                                                            <input type="checkbox"/>
+                                                            <span class="checkbox-switch-inner"></span>
+                                                        </label>
+                                                        <a>Transportation</a>
+                                                    </div>
+                                                    <div id="Other" class="filter_piece">
+                                                        <label id="other_color" class="checkbox-switch" onclick> <!-- The onclick attribute is required by iOS -->
+                                                            <input type="checkbox"/>
+                                                            <span class="checkbox-switch-inner"></span>
+                                                        </label>
+                                                        <a>Other</a>
+                                                    </div>
+                                	            </div>
+                                	       </div>
+                                	       <div id="filter_2_wrapper">
+                                	           <div class="filter_title" style="margin-bottom:0px;">
+                                	               <h3>Level of Satisfaction</h3>
+                                	           </div>
+                                	           <div class="filter_col" style="width:180px; margin-left: 1.1vw; display: flex; flex-direction: column; justify-content: flex-start;margin-bottom: 22px;">
+                                                    <div style="margin-top: 10px;" id="allSat" class="filter_piece">
+                                                        <label id="all_satisfaction" class="checkbox-switch" onclick> <!-- The onclick attribute is required by iOS -->
+                                                            <input type="checkbox"/>
+                                                            <span class="checkbox-switch-inner"></span>
+                                                        </label>
+                                                        <a>All</a>
+                                                    </div>
+                                                    <div style="margin-top: 11px;" id="fully" class="filter_piece">
+                                                        <label id="full_satisfaction" class="checkbox-switch" onclick> <!-- The onclick attribute is required by iOS -->
+                                                            <input type="checkbox"/>
+                                                            <span class="checkbox-switch-inner"></span>
+                                                        </label>
+                                                        <a>Fully Satisfied</a>
+                                                    </div>
+                                                    <div style="margin-top: 11px;" id="mostly" class="filter_piece">
+                                                        <label id="mostly_satisfied" class="checkbox-switch" onclick> <!-- The onclick attribute is required by iOS -->
+                                                            <input type="checkbox"/>
+                                                            <span class="checkbox-switch-inner"></span>
+                                                        </label>
+                                                        <a>Mostly Satisfied</a>
+                                                    </div>
+                                                    <div style="margin-top: 11px;" id="somewhat" class="filter_piece">
+                                                        <label id="somewhat_satisfied" class="checkbox-switch" onclick> <!-- The onclick attribute is required by iOS -->
+                                                            <input type="checkbox"/>
+                                                            <span class="checkbox-switch-inner"></span>
+                                                        </label>
+                                                        <a>Somewhat Satisfied</a>
+                                                    </div>
+                                                    <div style="margin-top: 11px;" id="rarely" class="filter_piece">
+                                                        <label id="marginally_satisfied" class="checkbox-switch" onclick> <!-- The onclick attribute is required by iOS -->
+                                                            <input type="checkbox"/>
+                                                            <span class="checkbox-switch-inner"></span>
+                                                        </label>
+                                                        <a>Marginally Satisfied</a>
+                                                    </div>
+                                                    <div style="margin-top: 11px;" id="none" class="filter_piece">
+                                                        <label id="not_satisfied"class="checkbox-switch" onclick> <!-- The onclick attribute is required by iOS -->
+                                                            <input type="checkbox"/>
+                                                            <span class="checkbox-switch-inner"></span>
+                                                        </label>
+                                                        <a>Not At All</a>
+                                                    </div>
+                                                </div>
+                                	       </div>
+                                	       
+                                	       <div id="filter_3_wrapper">
+                                	           <div class="filter_selections" style="width:180px; display: flex; flex-direction: row; justify-content: flex-end;margin-right: -3px;">
+                                	            <a id = "Reset"><img src="assets/Steven-Reset.png"></a>
+                                	            <a id = "to2D"><img src="assets/Steven-3D-2D.png"></a>
+                                	           </div>
+                                	       </div>
+                                        </div>
+                                    </div>
+                                    <div class="textBox">
+                                                <p class = "subTitle">Industry </p>
+                                                <p id="jobInd"></p>
+                                                <p class = "subTitle">Name of Position </p>
+                                                <p id="jobName"></p>
+                                                <p class = "subTitle">Duration of Position (in Years)</p>
+                                                <p id="jobYrs"></p>
+                                                <p class = "subTitle">Level of Satisfaction </p>
+                                                <p id="jobSat"></p>
+                                                <p class = "subTitle">What affects the level of satisfaction?</p>
+                                                <p id="jobWhy"></p>
+                                                <div class="legend" style="margin-top: 40px;display: flex;flex-direction: row;justify-content: flex-start;">
+                                                    <img style="margin-left: 10px; width: auto; height: 90px;vertical-align: middle;    margin-top: 23px;" src = "assets/Steven-Legend.png" >
+                                                    <div class="caption" style="display: flex; flex-direction:column;justify-content:space-around;">
+                                                        <p style=" margin-top: 8px;margin-left: 16px;font-size: .6rem;font-weight: 300;color: #232527;margin-bottom: 8px;">current position/company</p>
+                                                        <p style=" margin-top: 8px;margin-left: 16px;font-size: .6rem;font-weight: 300;color: #232527;margin-bottom: 7px;">previous position/company</p>
+                                                        <p style="margin-top: 8px;margin-left: 16px;font-size: .6rem;font-weight: 300;color: #232527;">2nd previous position/company</p>
+                                                    </div>
+                                                </div>               
+                                    </div>
+                 
+                                    <script>
+                                        setup();
+                                        init();
+                                        buildTowers();
+                                        animate();
+                                        
+                                    </script>
+                             </div>
+                             <!--end of BOXxxxxxxxxxxxxxxxxxx--> 
+                         </div>
+                         <!--end of BODYCONTAINER-->  
+                        </div> 
+                        <!--end of slide 1-->
+                </div>
+            </div>        
+        </div>
+
+
+<!--warning: below are scripts, think thrice before change anything!!!-->
+<!--warning: below are scripts, think thrice before change anything!!!-->
+<!--warning: below are scripts, think thrice before change anything!!!-->
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#wrapper').fullpage();
+                $('input').checked=false;
+            });
+
+//Steven: these javascript control the filter menu
+        
+        var input_list=['#all_color','#agency_color','#consulting_color','#tech_color',"#business_color","#print_color","#healthcare_color","#entertainment_color","#manufacturing_color","#nonprofit_color","#education_color","#finance_color","#government_color","#law_color","#retail_color","#transportation_color","#other_color"];
+
+        var e;
+
+        function return_to_origin (){
+            $(".filter_piece a").css("font-weight", "normal");
+            $('label').css({"border":"1px solid #f8f8f8"});
+
+        }
+
+        function filter_1 (e){
+            return_to_origin();
+            $(input_list[e]+"a").css("font-weight", "bold");
+            // right now this is kinda jenk but I will fix it.
+            if ($(input_list[e]+'.checkbox-switch input').prop('checked')!=true){
+                // return to the original state
+                $('#filter_wrapper div.filter_piece .checkbox-switch input').prop('checked', false);
+                $(input_list[e]+'.checkbox-switch input').prop("checked",true);
+                $("#filter_2_wrapper").css({"display":"flex","opacity":"1.0","transition":"opacity 1s ease"});
+                $(input_list[e]).css({"border":"1px solid #444"});
+                $("#filter_3_wrapper").css({"padding-top":"20px"});
+            }else{
+                $(input_list[e]+'.checkbox-switch input').prop("checked",false);
+                $("#filter_2_wrapper").css({"display":"none","opacity":"0.0","transition":"opacity 1s ease"});
+                $("#filter_3_wrapper").css({"padding-top":"360px"});
+                $(input_list[e]).css({"border":"1px solid #f8f8f8"});
+                $('#filter_2_wrapper div.filter_piece .checkbox-switch input').prop('checked', false);
+            }
+        };
+        
+        $("#AllIndustries").click( function (e){
+            filter_1(0);
+            
+            clearAll();
+            filterObj.theStatus = false;
+            filterObj.industry = -1;
+            buildTowers();
+        });
+        
+        
+        $("#Agency").click(function(e){
+            filter_1(1);
+            
+            clearAll();
+            filterObj.theStatus = true;
+            filterObj.industry = 1;
+            buildTowers();
+        });
+
+        $("#Consulting").click( function (e){
+            filter_1(2);
+            
+            clearAll();
+            filterObj.theStatus = true;
+            filterObj.industry = 2;
+            buildTowers();
+        });
+        $("#Tech").click( function (e){
+            filter_1(3);
+            
+            clearAll();
+            filterObj.theStatus = true;
+            filterObj.industry = 0;
+            buildTowers();
+        });
+        $("#Business").click( function (e){
+            filter_1(4);
+            
+            clearAll();
+            filterObj.theStatus = true;
+            filterObj.industry = 4;
+            buildTowers();
+        });
+        $("#Print").click( function (e){
+            filter_1(5);
+            
+            clearAll();
+            filterObj.theStatus = true;
+            filterObj.industry = 5;
+            buildTowers();
+        });
+        $("#Healthcare").click( function (e){
+            filter_1(6);
+            
+            clearAll();
+            filterObj.theStatus = true;
+            filterObj.industry = 6;
+            buildTowers();
+        });
+        $("#Entertainment").click( function (e){
+            filter_1(7);
+            
+            clearAll();
+            filterObj.theStatus = true;
+            filterObj.industry = 7;
+            buildTowers();
+        });
+        $("#Manufacturing").click( function (e){
+            filter_1(8);
+            
+            clearAll();
+            filterObj.theStatus = true;
+            filterObj.industry = 3;
+            buildTowers();
+        });
+        $("#Nonprofit").click( function (e){
+            filter_1(9);
+            
+            clearAll();
+            filterObj.theStatus = true;
+            filterObj.industry = 8;
+            buildTowers();
+        });
+        $("#Education").click( function (e){
+            filter_1(10);
+            
+            clearAll();
+            filterObj.theStatus = true;
+            filterObj.industry = 9;
+            buildTowers();
+        });
+        $("#Finance").click( function (e){
+            filter_1(11);
+            
+            clearAll();
+            filterObj.theStatus = true;
+            filterObj.industry = 10;
+            buildTowers();
+        });
+        $("#Government").click( function (e){
+            filter_1(12);
+            
+            clearAll();
+            filterObj.theStatus = true;
+            filterObj.industry = 11;
+            buildTowers();
+        });
+        $("#Law").click( function (e){
+            filter_1(13);
+            
+            clearAll();
+            filterObj.theStatus = true;
+            filterObj.industry = 12;
+            buildTowers();
+        });
+        $("#Retail").click( function (e){
+            filter_1(14);
+            
+            clearAll();
+            filterObj.theStatus = true;
+            filterObj.industry = 13;
+            buildTowers();
+        });
+        $("#Transportation").click( function (e){
+            filter_1(15);
+            
+            clearAll();
+            filterObj.theStatus = true;
+            filterObj.industry = 14;
+            buildTowers();
+        });
+        
+        $("#Other").click( function (e){
+            filter_1(16);
+            
+            clearAll();
+            filterObj.theStatus = true;
+            filterObj.industry = 15;
+            buildTowers();
+        });
+    // END INDUSTRY FILTERING JQUERY 
+
+    var satisfaction_list = ['#all_satisfaction','#full_satisfaction','#mostly_satisfied','#somewhat_satisfied','#marginally_satisfied','#not_satisfied'];
+
+    function filter_satisfaction(e){
+        $('#filter_2_wrapper label').css({"border":"1px solid #f8f8f8"});
+        $('#filter_2_wrapper div.filter_piece .checkbox-switch input').prop('checked', false);
+        if ($(satisfaction_list[e]+'.checkbox-switch input').prop('checked')!=true){
+                // return to the original state
+                $('#filter_2_wrapper div.filter_piece .checkbox-switch input').prop('checked', false);
+                $(satisfaction_list[e]+'.checkbox-switch input').prop("checked",true);
+                $(satisfaction_list[e]).css({"border":"1px solid #444"});
+            }else{
+                $(satisfaction_list[e]+'.checkbox-switch input').prop("checked",false);
+                $(satisfaction_list[e]).css({"border":"1px solid #f8f8f8"});
+            }
+    };
+
+    
+    // BEGIN ALIGNMENT FILTERING JQUERY   
+        $("#allSat").click( function (e){
+            $(".filter_piece a").css("font-weight", "normal");
+            $("#allSat a").css("font-weight", "bold"); 
+            filter_satisfaction(0);
+             
+            clearAll();
+            filterObj.alignment = -1;
+            buildTowers();
+        });
+
+        $("#fully").click( function (e){ 
+            $(".filter_piece a").css("font-weight", "normal");
+            $("#fully a").css("font-weight", "bold");
+            filter_satisfaction(1);
+
+            clearAll();
+            filterObj.theStatus = true;
+            filterObj.alignment = 5;
+            buildTowers();
+        });
+
+         $("#mostly").click( function (e){
+            $(".filter_piece a").css("font-weight", "normal");
+            $("#mostly a").css("font-weight", "bold"); 
+            filter_satisfaction(2);
+             
+            clearAll();
+            filterObj.theStatus = true;
+            filterObj.alignment = 4;
+            buildTowers();
+        });
+         $("#somewhat").click( function (e){
+            $(".filter_piece a").css("font-weight", "normal");
+            $("#somewhat a").css("font-weight", "bold");
+            filter_satisfaction(3);
+             
+            clearAll();
+            filterObj.theStatus = true;
+            filterObj.alignment = 3;
+            buildTowers();
+        });
+         $("#rarely").click( function (e){
+            $(".filter_piece a").css("font-weight", "normal");
+            $(".filter_piece a").css("font-weight", "normal");
+            filter_satisfaction(4);
+             
+            clearAll();
+            filterObj.theStatus = true;
+            filterObj.alignment = 2;
+            buildTowers();
+        });
+         $("#none").click( function (e){
+            $(".filter_piece a").css("font-weight", "normal");
+            $("#none a").css("font-weight", "bold"); 
+            filter_satisfaction(5);
+             
+            clearAll();
+            filterObj.theStatus = true;
+            filterObj.alignment = 1;
+            buildTowers();
+        });
+
+    // End ALIGNMENT FILTERING JQUERY    
+       
+        // new script for wrapper 2
+        $(function() {
+          $('#filter_2_wrapper div.filter_piece .checkbox-switch input').change(function() {
+            if($(this).prop('checked')) {
+              $('#filter_2_wrapper div.filter_piece .checkbox-switch input').prop('checked', false);
+              $(this).prop('checked', true);
+            }
+          });
+        });
+        // the end 
+    
+        
+        // more control panels!!
+    
+        
+        $('#to2D').click(function() {
+            $('.menu-btn-orbs-2d-3d').toggleClass('active');
+            
+             clearAll();
+            
+            if (is2D) {is2D = false; buildTowers();}
+            else {is2D = true; build2DTowers();}
+        });
+            
+            $('#Reset').click(function() {
+                $('.menu-btn-orbs-reset').toggleClass('active');
+				camera.position.set( 0, 300, 500 );
+				camera.rotation.set( 0, 0, 0 );
+				camera.rotation.onChangeCallback._x = 0; 
+				camera.rotation.onChangeCallback._y = 0; 
+				camera.rotation.onChangeCallback._z = 0; 
+        });
+        
+            $(function() {
+                $.fn.fullpage.setMouseWheelScrolling(false);
+                $.fn.fullpage.setAllowScrolling(false);
+            });
+        </script>
+            
+       
+    </body>
+</html>
